@@ -1,6 +1,6 @@
 const pageTitle = `"STRINGBAG"`;
 const mainImage = "img/swordfish.jpg";
-const altText = "he Fairey Swordfish";
+const altText = "The Fairey Swordfish";
 const figCaptionText = "Photo By Tony Hisgett - Birmingham, UK";
 const figCaptionHref = "https://www.flickr.com/photos/hisgett/";
 
@@ -11,16 +11,19 @@ document.querySelector(".mainImage").setAttribute("alt", altText);
 document.querySelector("#mainImageCaption").innerHTML = `<a href=${figCaptionHref} target="_blank">${figCaptionText}</a>`;
 
 const mainContent = {
-    title: `The Fairey Swordfish`,
-    text:[`The Fairey Swordfish is a biplane torpedo bomber, designed by the Fairey Aviation Company. Originating in the early 1930s, the Swordfish, nicknamed "Stringbag", was principally operated by the Fleet Air Arm of the Royal Navy.`, `Despite being outmoded by 1939, the Swordfish achieved some spectacular successes during the war. Notable events included sinking one battleship and damaging two others of the Regia Marina (the Italian navy) during the Battle of Taranto, and the famous attack on the German battleship Bismarck, which contributed to her eventual demise. Swordfish sank a greater tonnage of Axis shipping than any other Allied aircraft during the war. The Swordfish remained in front-line service until V-E Day, having outlived some of the aircraft intended to replace it.`],
+    title: `The Fairey Swordfish`,
+    text:[`The Fairey Swordfish is a biplane torpedo bomber, designed by the Fairey Aviation Company. Originating in the early 1930s, the Swordfish, nicknamed "Stringbag", was principally operated by the Fleet Air Arm of the Royal Navy.`, 
+    
+    `Despite being outmoded by 1939, the Swordfish achieved some spectacular successes during the war. Notable events included sinking one battleship and damaging two others of the Regia Marina (the Italian navy) during the Battle of Taranto, and the famous attack on the German battleship Bismarck, which contributed to her eventual demise. Swordfish sank a greater tonnage of Axis shipping than any other Allied aircraft during the war. The Swordfish remained in front-line service until V-E Day, having outlived some of the aircraft intended to replace it.`],
+
     cite: `This information, and more, can be found at <cite><a href="https://en.wikipedia.org/wiki/Fairey_Swordfish" target="_blank" >Wikipedia.org/wiki/Fairey_Swordfish</a></cite>`
 };
 
 const article = document.querySelector("article");
-article.innerHTML = `<h2>${mainContent.title}<h2><hr>`;
+article.innerHTML = `<h2>${mainContent.title}</h2><hr>`;
 
 for (const item of mainContent.text) {
-    
+
         article.innerHTML += `<p>${item}</p>`;
 }
 
@@ -41,6 +44,7 @@ const leftListDiv = document.querySelector("#leftListDiv > ul");
 for (const key in listOne) {
 
     if(key !== "Title"){
+
         leftListDiv.innerHTML += `<li>${key}: ${listOne[key]}</li>`;
     }
 }
