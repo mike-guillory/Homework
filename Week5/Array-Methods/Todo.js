@@ -300,9 +300,9 @@ const users = [
       "completed": true
     }
   ]
-  
+
 // create a list of user 3's to-dos
-threesTodos = users.filter(user => user.userId === 3);
+const threesTodos = users.filter(user => user.userId === 3);
 console.log(threesTodos);
 
 // then find the number of user 3's incomplete tasks
@@ -323,7 +323,7 @@ console.log(threeIncomplete);
 // The closest I could get was an Array of Objects.
 const IncompleteTasks = [];
 
-// I started with an Object declared as a function, but VS Code suggested 
+// I started with an Object declared as a function, but VS Code suggested
 // doing it as a Class, and that seems more appropriate to me.
 class TaskSummary {
   constructor(id, tt, ti, tl) {
@@ -355,7 +355,7 @@ function summarize(userIds, usersArray){
 
     summary = new TaskSummary(id, taskTotal, tasksIncomplete, taslList);
     IncompleteTasks.push(summary);
-    });   
+    });
 };
 
 summarize([1, 3], users);
