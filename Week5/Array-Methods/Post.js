@@ -306,13 +306,5 @@ const fivesPosts = users.filter(user => user.userId === 5);
 console.log(fivesPosts);
 
 // then, create a list of title and body pairs
-const titleAndBody = [];
-users.forEach(user => {
-    if(user.userId === 5){
-        titleAndBody.push({
-            title: user.title,
-            body: user.body
-        });
-    };
-});
+const titleAndBody = users.map(user => ({title: user.title, body: user.body}));
 console.log(titleAndBody);

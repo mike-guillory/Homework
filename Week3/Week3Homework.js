@@ -65,13 +65,13 @@ function getPizzaOrder(size, crust, ...toppingsList) {
 }
 
 function preparePizza(orderArray) {
-  const orderObject = {
+  console.log("Cooking pizza...");
+  //Creates an array while returning it
+  return {
     size: orderArray[0],
     crust: orderArray[1],
     toppings: orderArray[2]
   };
-  console.log("Cooking pizza...");
-  return orderObject;
 }
 
 function servePizza(pizza) {
@@ -85,6 +85,7 @@ function servePizza(pizza) {
 }
 
 greetCustomer(toppings);
-const orderArray = getPizzaOrder("large", "thin", "Italian Sausage", "Green Peppers", "Pineapple");
-const orderObject =  preparePizza(orderArray);
-servePizza(orderObject);
+// const orderArray = getPizzaOrder("large", "thin", "Italian Sausage", "Green Peppers", "Pineapple");
+// const orderObject =  preparePizza(orderArray);
+// servePizza(orderObject);
+servePizza(preparePizza(getPizzaOrder("large", "thin", "Italian Sausage", "Green Peppers", "Pineapple")));
